@@ -1,0 +1,23 @@
+<?php /* Smarty version 2.6.26, created on 2023-07-15 10:36:41
+         compiled from customerreg.tpl */ ?>
+<html>
+<head><title>Registration</title></head>
+<body>
+    <br><br><br><br><br><br>
+    <center>
+        <table>
+        <form method="post" action="">
+            <input type="hidden" name="hide" value="h">
+            <tr><td>Name</td><td><input type="text" name="name" class="form-control"></td></tr>
+            <tr><td> Address</td><td><textarea name="address" class="form-control"></textarea></td></tr>
+            <tr><td>Contact</td><td><input type="text" name="contact" class="form-control"></td></tr>
+            <tr><td>email</td><td><input type="email" name="email" class="form-control"></td></tr>
+            <tr><td>password</td><td><input type="password" name="password" class="form-control"></td></tr>
+            <tr><td></td><td> <input type="Submit" value="Register" class="btn btn-success"></td></tr>
+    
+        </form>
+    </table>
+    </center>
+</body></html>
+
+            

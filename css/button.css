@@ -1,0 +1,75 @@
+.buy {
+    background-color: #FF5C00;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buy:hover {
+    background-color: #E64800;
+}
+
+.cart {
+    background-color: #00C853;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cart:hover {
+    background-color: #009624;
+}
+
+.rent {
+    background-color: #FF4081;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.rent:hover {
+    background-color: #D81B60;
+}
+
+.offer {
+    background-color: #536DFE;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.offer:hover {
+    background-color: #3D5AFE;
+}
+
+.remove {
+    background-color: #FF3D00;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.5s;
+}
+
+.remove:hover {
+    background-color: #D50000;
+}
+.product-preview {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .product-preview:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Change the text color to white */
+  }
