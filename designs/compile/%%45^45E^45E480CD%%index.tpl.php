@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2024-02-02 13:17:29
+<?php /* Smarty version 2.6.26, created on 2024-03-19 05:43:41
          compiled from index.tpl */ ?>
 <!DOCTYPE html><?php echo '
 <html lang="zxx">
@@ -203,6 +203,7 @@
           <nav class="nav-menu mobile-menu">
             <ul>
               <li><a href="index.php">Home</a></li>
+              <li><a href="login.php">Log in</a></li>
 
               <li>
                 <a href="#">Signup </a>

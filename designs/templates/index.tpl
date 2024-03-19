@@ -201,6 +201,7 @@
           <nav class="nav-menu mobile-menu">
             <ul>
               <li><a href="index.php">Home</a></li>
+              <li><a href="login.php">Log in</a></li>
 
               <li>
                 <a href="#">Signup </a>

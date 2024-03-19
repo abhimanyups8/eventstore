@@ -56,7 +56,7 @@
           </div>
           <div class="ht-right">
             <a href="logout.php" class="login-panel"
-              ><i class="fa fa-user"></i>Log <output></output></a
+              ><i class="fa fa-user"></i>Log Out</a
             >
             <!-- <div class="lan-selector">
               <select

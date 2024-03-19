@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2024-02-02 13:24:59
+<?php /* Smarty version 2.6.26, created on 2024-03-19 05:29:28
          compiled from shophome.tpl */ ?>
 <!DOCTYPE html><?php echo '
 <html lang="zxx">
@@ -57,8 +57,8 @@
             </div> -->
           </div>
           <div class="ht-right">
-            <a href="login.php" class="login-panel"
-              ><i class="fa fa-user"></i>Log In</a
+            <a href="logout.php" class="login-panel"
+              ><i class="fa fa-user"></i>Log Out</a
             >
             <!-- <div class="lan-selector">
               <select
