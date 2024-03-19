@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2023-10-13 15:51:27
+<?php /* Smarty version 2.6.26, created on 2024-03-19 06:57:50
          compiled from cartview.tpl */ ?>
 <!DOCTYPE html>
 <html>
@@ -88,58 +88,63 @@
 " class="btn btn-warning">Buy All</a></td>
  -->
  <div class="container">
-    <div class="row">
-      <?php $_from = $this->_tpl_vars['view']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+  <div class="row">
+    <?php $_from = $this->_tpl_vars['view']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['d']):
 ?>
-          <div class="cad col-lg-3 col-md-4 col-sm-6 product-preview" style="border: 1px solid black;">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card border-0 shadow-sm">
         <a href="productdetails.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
-">
-        <center><img src="images/<?php echo $this->_tpl_vars['d']['productkey']; ?>
+" class="text-decoration-none text-dark">
+          <center> <img src="images/<?php echo $this->_tpl_vars['d']['productkey']; ?>
 /<?php echo $this->_tpl_vars['d']['image']; ?>
-" class="rounded" height="200px" width="150px"><br></center>
-        <div class="text-center">
-          <div><?php echo $this->_tpl_vars['d']['category']; ?>
-</div>
-          <div><?php echo $this->_tpl_vars['d']['name']; ?>
-</div>
-          <div><font color="orange">Rent Amount:</font> <?php echo $this->_tpl_vars['d']['rentamt']; ?>
- Rs</div>
-          <div><font color="orange">Amount:</font> <?php echo $this->_tpl_vars['d']['amount']; ?>
- Rs</div>
-        </div>
-        <?php if ($this->_tpl_vars['d']['selling'] == 'Rent'): ?>
-        <div class="text-center">
+" class="rounded" height="225px" width="160px"><br></center>          <div class="card-body">
+            <h5 class="card-title mb-0"><?php echo $this->_tpl_vars['d']['name']; ?>
+</h5>
+            <p class="card-text text-muted">Category: <?php echo $this->_tpl_vars['d']['category']; ?>
+</p>
+            <p class="card-text">Rent Amount: <span class="text-warning"><?php echo $this->_tpl_vars['d']['rentamt']; ?>
+ Rs</span></p>
+            <p class="card-text">Amount: <span class="text-warning"><?php echo $this->_tpl_vars['d']['amount']; ?>
+ Rs</span></p>
+          </div>
+        </a>
+        <div class="card-footer bg-transparent border-0 text-center">
+          <?php if ($this->_tpl_vars['d']['selling'] == 'Rent'): ?>
           <a href="productrent.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
-&&amt=<?php echo $this->_tpl_vars['d']['rentamt']; ?>
-" class="btn btn-warning rent">Rent<img src="images/img.gif" height="20px" width="20px"></a>
-        </div>
-        <?php elseif ($this->_tpl_vars['d']['selling'] == 'Sell'): ?>
-        <div class="text-center">
+&amp;amt=<?php echo $this->_tpl_vars['d']['rentamt']; ?>
+" class="btn btn-warning btn-sm rent">Rent</a>
+          <?php elseif ($this->_tpl_vars['d']['selling'] == 'Sell'): ?>
           <a href="productbuy.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
-&&amt=<?php echo $this->_tpl_vars['d']['amount']; ?>
-&&log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
-" class="btn btn-warning buy">Buy<img src="images/img.gif" height="20px" width="20px"></a>
-        </div>
-        <?php else: ?>
-        <div class="text-center">
+&amp;amt=<?php echo $this->_tpl_vars['d']['amount']; ?>
+&amp;log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
+" class="btn btn-warning btn-sm buy">Buy</a>
+          <?php else: ?>
           <a href="productbuy.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
-&&amt=<?php echo $this->_tpl_vars['d']['amount']; ?>
-&&log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
-" class="btn btn-warning buy">Buy<img src="images/img.gif" height="20px" width="20px"></a>
+&amp;amt=<?php echo $this->_tpl_vars['d']['amount']; ?>
+&amp;log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
+" class="btn btn-warning btn-sm buy">Buy</a>
           <a href="productrent.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
-&&amt=<?php echo $this->_tpl_vars['d']['rentamt']; ?>
-&&log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
-" class="btn btn-warning rent">Rent<img src="images/img.gif" height="20px" width="20px"></a>
-        </div>
-        <?php endif; ?>
-        <div class="text-center">
-         <br> <a href="cartdelete.php?key=<?php echo $this->_tpl_vars['d']['cartkey']; ?>
-" class="btn btn-warning remove">Remove from Cart</a>
+&amp;amt=<?php echo $this->_tpl_vars['d']['rentamt']; ?>
+&amp;log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
+" class="btn btn-warning btn-sm rent">Rent</a>
+          <?php endif; ?>
+          <a href="cart.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
+&amp;amt=<?php echo $this->_tpl_vars['d']['rentamt']; ?>
+&amp;log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
+&amp;tamt=<?php echo $this->_tpl_vars['d']['amount']; ?>
+" class="btn btn-warning btn-sm cart">Add To Cart</a>
+          <a href="customerofferview.php?key=<?php echo $this->_tpl_vars['d']['productkey']; ?>
+&amp;log=<?php echo $this->_tpl_vars['d']['loginid']; ?>
+&amp;okey=<?php echo $this->_tpl_vars['d']['offkey']; ?>
+" class="btn btn-warning btn-sm offer">Offers</a>
         </div>
       </div>
-      <?php endforeach; endif; unset($_from); ?>
     </div>
+    <?php endforeach; endif; unset($_from); ?>
   </div>
+</div>
+
+
        <?php endif; ?> 
        </body></html>

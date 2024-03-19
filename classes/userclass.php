@@ -376,6 +376,7 @@ while($rr=mysql_fetch_array($erc)){
     return $arr;
 
 }
+
 function totalamountview($key){
     $id=keytoid("login","lkey",$key);
     $qrry="SELECT SUM(totalamount) FROM cart where loginid='".$id."'";
@@ -867,6 +868,7 @@ function acceptreturn($key){
      </script>";}
 
 }
+
 function returnpaymentinsert($cnumber, $edate ,$cvv,$cowner,$amt,$key,$amt,$log,$ckey){
     //echo$key;exit;
     $qrry="select tamount from bank where cvv='".$cvv."' AND cardno='".$cnumber."' ";
